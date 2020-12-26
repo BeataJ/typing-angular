@@ -13,4 +13,12 @@ export class AppComponent {
   onInput(value: string): any {
     this.enteredText = value;
   }
+
+  getClass(randomLetter: string, enteredLetter: string): any {
+    if (!enteredLetter) {
+      return 'pending';
+    }
+
+    return randomLetter === enteredLetter ? 'correct' : 'incorrect';
+  }
 }
